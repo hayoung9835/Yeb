@@ -1,0 +1,60 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Yeb 채팅</title>	
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/conversation.css" type="text/css" />
+	<link rel="stylesheet" href="css/conversation_Bounce.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/style_chat01.css" type="text/css" />
+
+	<!-- jQuery 1.7+, IE 7+ -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/conversation.js"></script>
+	<script src="js/script_chat01.js"></script>
+	<script>
+		// <![CDATA[
+		try {
+			window.addEventListener('load', function() {
+				setTimeout(scrollTo, 0, 0, 1); 
+			}, false);
+		} catch(e) {}
+		// ]]>
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<div class="topMenu">
+		<div class="prevBtn">
+			<a href="../roadmate3_2_roomsearch.html"  data-ajax="false"><img src="images/left_arrow.png" width="30" alt="" /></a>
+		</div>
+		<h2>송파 배드민턴장 3코트 / 주차가능</h2>
+		<div class="callBtn">
+			<a href="">2/8</a>
+		</div>
+
+	</div><!-- class="topMenu" -->
+
+	<div class="chatWrap">	
+		<div class="chat">
+			<div class="tabMenu">
+				<div class="tab3">
+					김서율님이 입장하셨습니다.
+				</div>
+			</div>	
+			<div class="messages">
+				<div class="messages-content"></div>
+			  </div>
+		</div>
+
+		<div class="message-box">
+			<textarea type="text" class="message-input" placeholder="메이트와 인사를 나누어 보세요." ></textarea>
+			<button type="submit" name="btn1" value="전송" class="message-submit">전송</button>
+		</div>
+		<div class="bg"></div>
+	</div><!-- class="chatWrap" -->
+</div><!-- id="wrap" -->
+</html>

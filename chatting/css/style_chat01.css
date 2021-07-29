@@ -1,0 +1,22 @@
+﻿#wrap{width: 100%; background: #f3f3f3;}
+
+.topMenu{width: 100%; height:60.05px; background: #ffffff;}
+.topMenu .prevBtn{width: 24px; height: 21px; position: absolute; top: 16px; left: 5px;}
+.topMenu .prevBtn a{padding: 15px;}
+.topMenu > h2{text-align: center; height: 60.05; line-height: 60.05px; font-size: 18px; color: #7B4CE0;  letter-spacing: -1px; width: 57%; margin-left: 75px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+h1{display:none;}
+.topMenu .callBtn{width: 70px; height: 21px;position: absolute;top: 14px;right: 12px; font-size: 1em; text-align: center;color: #FFE401; border:1px solid #FFE401; border-radius:5px; padding:3px; line-height:21px; background: #FFE401;}
+.topMenu .callBtn a{color: #ffffff; font-weight: bold; }
+
+
+.tabMenu{width: 100%; background: #ffffff;}
+.tabMenu .tab3{height: 40px; margin: 0 auto; text-align: center; line-height: 40px; color: #999999; font-size:0.9em; background: #ffffff; }
+
+
+
+.chatWrap{width: 100%; font-size: 13px;}
+
+.hiddenMenu .box2 p{display: none;}
+.hiddenMenu .box2 > img{margin-top: 13px;}
+
+#wrap .mCSB_scrollTools .mCSB_draggerRail{background:#ffffff;}

@@ -1,0 +1,63 @@
+﻿@charset "utf-8";
+
+/* Basic Style START (dohoons, 200803, 200908, 201011, 201106, 201305) */
+html, body { height:100%; -webkit-text-size-adjust:none; }
+html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption { margin:0; padding:0; }
+ol, ul, li { list-style:none; }
+img, fieldset { border:0 none; }
+input, select, textarea { vertical-align:middle; resize:none; position:relative; }
+input[type=text], input[type=password], input[type=submit], input[type=search], textarea { -webkit-appearance:none; }
+button { border:0 none; background:transparent; cursor:pointer; }
+hr { display:none; }
+legend, .hide { width:0; height:0; visibility:hidden; font-size:0; line-height:0; position:absolute; top:0; left:0; overflow:hidden; }
+table caption { width:0; height:0; visibility:hidden; text-indent:-9999px; font-size:0; line-height:0; }
+table { border-collapse:collapse; border-spacing:0; }
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { display:block; }
+
+html{overflow-x: hidden;}
+ 
+a:link, a:visited { text-decoration:none; color:#666; }
+ 
+body{ width:100%; font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 14px; color: #333333; line-height: 160%;}
+
+.subMenuWrap{position:absolute; top:0px; left:0px; width: 100%;}
+.subMenuWrap h1{width: 40px; height: 50px; margin: 0 auto; padding-top: 20px;}
+.subMenuWrap p.saveBtn{width: 30px; position: absolute; top: 25px; right: 25px; color: #ffffff;}
+.subMenuWrap p.saveBtn a{color: #ffffff; text-decoration: none;}
+.subMenu{width: 100%; height: 43px; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2);}
+.subMenu > div{width: 33.3%; height: 40px; float: left; text-align: center; line-height: 40px; }
+.subMenu > div > a { text-decoration:none; display:block; width:100%; color:#ffffff; }
+.bottomborder { position:absolute; bottom:0px; left:0px; width:33.3%; height:3px; background:#ffffff; }
+
+/* .fixMenuWrap{position: fixed; bottom: 2%; right: 3%; z-index:15; }
+.fixMenu{width: 140px; height: 140px;} */
+.moreBtn{ width: 58px; height: 58px; text-align: center; display:block; border: 1px solid #ffffff; border-radius: 50%; background: #ffffff; position: fixed; bottom: 10px; right: 10px; box-shadow: 5px 5px 10px rgba(51,51,51,0.5);}
+.moreBtn > a { display:block; width:58px; height:58px; border-radius:50%; }
+.moreBtn > a > img{ position:absolute; top:0px; left:50%; margin-left:-14.5px; padding-top: 15px; width: 50%;}
+.chatBtn{display: none; border: 1px solid #EBD075; border-radius: 50%; background: #EBD075; position: fixed; bottom: 80px; right: 10px; box-shadow: 5px 5px 10px rgba(51,51,51,0.5); width: 58px; height: 58px; text-align: center;}
+.chatBtn > a { display:block; width:58px; height:58px; border-radius:50%; }
+.chatBtn > a > img{ position:absolute; top:0px; left:50%; margin-left:-14.5px; padding-top: 15px; width: 50%;}
+.hamburgerBtn{display: none; margin-top: 20px; border: 1px solid #ffffff; border-radius: 50%; background: #ffffff; position: fixed; bottom: 10px; right: 80px; box-shadow: 5px 5px 10px rgba(51,51,51,0.5); width: 58px; height: 58px; text-align: center; }
+.hamburgerBtn > a { display:block; width:58px; height:58px; border-radius:50%; }
+.hamburgerBtn > a > img{ position:absolute; top:0px; left:50%; margin-left:-14.5px; padding-top: 18px; width: 50%;}
+
+.hiddenMenuWrap{display: none; position: fixed; top: 0px; right:-80%; z-index: 10; width: 80%; height: 100%; background: #ffffff; box-shadow: 5px 5px 10px rgba(51,51,51,0.5); z-index:20; }
+.hiddenMenu{width: 100%; height: 100%;}
+.hiddenMenu > .title{width: 100%; height: 113px; background: #EBD075; position: relative;}
+.hiddenMenu > .title img{width: 100%;}
+.hiddenMenu > .title > div{float: left; position: absolute;}
+.hiddenMenu > .title > .box1{width: 53px; height: 53px; padding: 30px; top: 0; left: 0;}
+.hiddenMenu > .title > .box2{top: 24px; left: 50%; text-align: center; color: #ffffff; font-size: 13px; letter-spacing: 1px; margin-left: -29px;}
+.hiddenMenu > .title > .box2 img{top: 0; left: 50%; width: 40px; padding-top: 5px;}
+.hiddenMenu > .title > .box3{width: 53px; height: 53px; padding: 30px; top: 0; right: 0;}
+.hiddenMenu > .list > p{width: 100%; height: 50px; border-bottom: 1px solid #eeeeee; line-height: 50px;}
+.hiddenMenu > .list > p:hover{background: #F3F3F3;}
+.hiddenMenu > .list > p > a{padding: 5% 45% 5% 20px; text-decoration: none;}
+.hiddenMenu > .list > p > a img{width: 16px; padding-right: 10px;}
+.hiddenMenu > .cancel{width: 58px; height: 58px; text-align: center; border: 1px solid #ffffff; border-radius: 50%; background: #ffffff; position: absolute; bottom: 2%; right: 3%; box-shadow: 5px 5px 10px rgba(51,51,51,0.3);}
+.hiddenMenu > .cancel > a{display:block; width:58px; height:58px; border-radius:50%;}
+.hiddenMenu > .cancel > a > img{width: 25px; position:absolute; top:1px; left:50%; margin-left:-12px; padding-top: 15px; }
+
+.dimmed { display:none; position:absolute; top:0px; left:0px; width:100%; height:100%; background:#333333; opacity:0.5; z-index:10; }
+
+/* Basic Style END */
