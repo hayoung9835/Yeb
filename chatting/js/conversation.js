@@ -17,6 +17,7 @@
 	 $(window).load(function() {
 	  $messages.mCustomScrollbar();
 	  setTimeout(function() {
+		fakeMessage3();
 		fakeMessage2();
 		fakeMessage();		
 	  }, 100);
@@ -67,32 +68,37 @@
 	})
 
 	var Fake = [
-	  '안녕하세요. 드라이버 모태구입니다.^^',
-	  '안녕하세요. 드라이버 모태구입니다.^^',
-	  '어디에서 탑승하세요?',
-	  '아~ 네. 거기 알아요.',
-	  '그럼 7시 30분에 봬요~^^ 늦지 않게 부탁드릴게요.',
-	  ':)',
-	  ':)',
-	  ':)',
-	  ':)',
-	  ':)',
-
+		'반갑습니다~ 벙주 마이욱입니다.  (๑>ᴗ<๑)',
+		'반갑습니다~ 벙주 마이욱입니다.  (๑>ᴗ<๑)',
+		'반갑습니다~ 벙주 마이욱입니다.  (๑>ᴗ<๑)',
+		'어디 지역분이신가요?',
+		'아~ 네. 가까우시군요.',
+		'혹시 급수가 어떻게 되시나요?',
+		':)',
+		':)',
+		':)',
+		':)',
+		':)',
+		':)'
 	]	
 	var Fake2 = [
-	  '안녕하세요.. 홍치즈..입니다...^^',
+	  '안녕하십니까 소범희입니다 ! ＼\ ٩( ᐛ )و /／ ',
+	]
+
+	var Fake3 = [
+	  '아..안..녕하세요... 안누니라고 합니다...(,,•﹏•,,)',
 	]
 
 	function fakeMessage() {
 	  if ($('.message-input').val() != '') {
 		return false;
 	  }
-	  $('<div class="message loading new"><figure class="avatar"><img src="images/me.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+	  $('<div class="message loading new"><figure class="avatar"><img src="images/hy.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
 	  updateScrollbar();
 
 	  setTimeout(function() {
 		$('.message.loading').remove();
-		$('<div class="message new"><figure class="avatar"><img src="images/me.png" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+		$('<div class="message new"><figure class="avatar"><img src="images/hy.png" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
 		setDate();
 		updateScrollbar();
 		i++;
@@ -105,12 +111,12 @@
 		return false;
 	  }
 	  
-	  $('<div class="message loading new"><figure class="avatar"><img src="images/p_2.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+	  $('<div class="message loading new"><figure class="avatar"><img src="images/cb.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
 	  updateScrollbar();
 
 	  setTimeout(function() {
 		$('.message.loading').remove();
-		$('<div class="message new"><figure class="avatar"><img src="images/p_2.png" /></figure>' + Fake2[0] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+		$('<div class="message new"><figure class="avatar"><img src="images/cb.png" /></figure>' + Fake2[0] + '</div>').appendTo($('.mCSB_container')).addClass('new');
 		setDate();
 		updateScrollbar();
 		i++;
@@ -118,7 +124,23 @@
 
 	}
 		
-	
+	function fakeMessage3() {
+	  if ($('.message-input').val() != '') {
+		return false;
+	  }
+	  
+	  $('<div class="message loading new"><figure class="avatar"><img src="images/aj.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+	  updateScrollbar();
+
+	  setTimeout(function() {
+		$('.message.loading').remove();
+		$('<div class="message new"><figure class="avatar"><img src="images/aj.png" /></figure>' + Fake3[0] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+		setDate();
+		updateScrollbar();
+		i++;
+	  }, 1000 + (Math.random() * 20) * 100);
+
+	}
 		
 });
 
