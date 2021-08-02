@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>cummunity</title>
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/sidebar.css"/>
+	<link rel="stylesheet" href="css/cummunity.css"/>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/sidebar.js"></script>
+	<script src="js/cummunity.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div id="header" class="cf">
+				<div id="h_menu" class="fl">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<button class="map_btn fr" type="button" onClick="location.href='../map/map.html';"></button>
+			</div>
+		</header>
+		<section>
+			<div id="tab_menu">
+				<h2 class="hidden">매치or채팅</h2>
+				<ul class="cf">
+					<li class="active"><a href="#match">매치찾기</a></li>
+					<li><a href="#chatting">채팅</a></li>
+				</ul>
+			</div>
+			<div id="tab_con">
+				<div id="match">
+					<div class="s_tab">
+						<h3 class="hidden">지역선택</h3>					
+						<ul class="cf">
+							<li class="act"><a href="">서울</a></li>
+							<li><a href="">경기인천</a></li>
+							<li><a href="">강원</a></li>
+							<li><a href="">충청</a></li>
+							<li><a href="">전라</a></li>
+							<li><a href="">경상</a></li>
+						</ul>
+					</div>
+					<div class="match_list">
+						<h3 class="hidden">지역리스트</h3>
+						<ul class="s_list_tab">
+							<li class="cf">
+								<span class="list_tit">
+									용왕산 배드민턴장 3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									반포 배드민턴장 2코트 / 주차불가
+								</span>
+								<span class="list_stit">
+									<span class="gender">남성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A~B조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감임박</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									마포구민체육센터 2,3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">8~16인</span>
+									·
+									<span class="level">C~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									송파 배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">여성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									국사본체육관 5코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									에이원민턴 잠실석촌호수점 2,3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">8~16인</span>
+									·
+									<span class="level">A~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									매봉실내배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									매봉실내배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+						</ul>
+						<ul class="s_list_tab">
+							<li class="cf">
+								<span class="list_tit">
+									용용용 배드민턴장 3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									반포 배드민턴장 2코트 / 주차불가
+								</span>
+								<span class="list_stit">
+									<span class="gender">남성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A~B조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감임박</button>
+							</li>
+							<li>
+								<span class="list_tit">
+									마포구민체육센터 2,3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">8~16인</span>
+									·
+									<span class="level">C~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									송파 배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">여성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									국사본체육관 5코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남성</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">A~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									에이원민턴 잠실석촌호수점 2,3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">8~16인</span>
+									·
+									<span class="level">A~D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">신청가능</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									매봉실내배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+							<li class="cf">
+								<span class="list_tit">
+									매봉실내배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									·
+									<span class="personnel">4~8인</span>
+									·
+									<span class="level">D조</span>
+								</span>
+								<button type="button" onClick="location.href='../join/join.html'">마감</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="chatting">
+					<div class="con_list">
+						<ul>
+							<li>
+								<span class="list_date">
+									<span class="date">2021.06.19(토)</span>
+									<span class="time">09:00~12:00</span>
+								</span>
+								<span class="list_tit">
+									송파 배드민턴장 3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">A~D조</span>
+								</span>
+									<button type="button" onClick="location.href='chatting.html'">채팅참여</button>
+							</li>
+							<li>
+								<span class="list_date">
+									<span class="date">2021.06.26(토)</span>
+									<span class="time">09:00~12:00</span>
+								</span>
+								<span class="list_tit">
+									송파 배드민턴장 3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">여성</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='chatting.html'">채팅참여</button>
+							</li>
+							<li>
+								<span class="list_date">
+									<span class="date">2021.06.27(일)</span>
+									<span class="time">14:00~16:00</span>
+								</span>
+								<span class="list_tit">
+									마포구민체육센터 2,3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									<span>·</span>
+									<span class="personnel">8~16인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='chatting.html'">채팅참여</button>
+							</li>
+							<li>
+								<span class="list_date">
+									<span class="date">2021.06.19(토)</span>
+									<span class="time">14:00~16:00</span>
+								</span>
+								<span class="list_tit">
+									용왕산 배드민턴장 3코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">남여모두</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='chatting.html'">채팅참여</button>
+							</li>
+							<li>
+								<span class="list_date">
+									<span class="date">2021.06.19(토)</span>
+									<span class="time">14:00~16:00</span>
+								</span>
+								<span class="list_tit">
+									송파 배드민턴장 7코트 / 주차가능
+								</span>
+								<span class="list_stit">
+									<span class="gender">여성</span>
+									<span>·</span>
+									<span class="personnel">4~8인</span>
+									<span>·</span>
+									<span class="level">D조</span>
+								</span>
+									<button type="button" onClick="location.href='chatting.html'">채팅참여</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> 
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<div id="f_menu">
+			<ul class="cf">
+				<li><a href="../index2.html">홈</a></li>
+				<li><a href="../reservation/reservation.html">예약</a></li>
+				<li class="on"><a href="cummunity.html">커뮤니티</a></li>
+				<li><a href="../information/information.html">내정보</a></li>
+			</ul>
+		</div>
+		
+		<div id="sidebar">
+			<div class="sidebar_inner">
+				<div class="login_box">
+					<a href="../member/login_form.php" class="cf"><img src="../img/profile.png" alt="login_icon"/><span class="text">로그인하기</span><span class="arrow"><img src="../img/right_arrow.png" alt="right_arrow"/></span></a>
+				</div>
+ 				<ul class="list1">
+					<li><a href="../mypage/reservation_list.html">나의 예약</a></li>
+					<li><a href="../mypage/board.html">나의 게시물</a></li>
+					<li><a href="../cummunity/chatting.html">나의 대화</a></li>
+					<li><a href="../competition/match.html">대회일정</a></li>
+				</ul>
+				<ul class="list2">
+					<li><a href="#">공지사항 <span class="new"><img src="../img/new.png" alt="new_icon"/></span></a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">설정</a></li>
+				</ul>
+				<div class="s_banner">
+					<img src="../img/s_banner.png" alt="s_banner"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

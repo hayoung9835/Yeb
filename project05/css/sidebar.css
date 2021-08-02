@@ -1,0 +1,15 @@
+﻿/* sidebar */
+#sidebar{width: 411px; height : 650px; position: absolute; top: 0; left: 50%; margin-left: -205.5px; background: rgba(0, 0, 0, .3); z-index: 50; display: none;}
+.sidebar_bg{width: 161px; height: 650px; position: absolute; right: 0;}
+.sidebar_inner{width: 250px; height : 650px; background-color:#ffffff; position: absolute; top: 0; left: 50%; margin-left: -457px; z-index: 100;}
+#sidebar .login_box a{letter-spacing: 1px; margin-top: 39px; margin-left: 31px;}
+#sidebar .login_box a img{margin-right: 16px; float: left;}
+#sidebar .login_box a .text{font-size: 21px; float: left;}
+#sidebar .login_box a .arrow{width: 25px; height: 25px; margin-top: 4px; margin-left: -4px; float: left;}
+#sidebar .login_box a .arrow img{height: 25px;}
+#sidebar .list1{width: 100%; height: 221px; margin-top: 17px; margin-bottom: 5px; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee;}
+#sidebar .list1 li a{font-size: 20px; padding: 13px 0 13px 33px;}
+#sidebar .list2 a{padding: 5px 0 5px 33px;} 
+#sidebar .list2 a .new{height: 25px; margin-right: 129px; float:right;}
+#sidebar .s_banner{margin-top: 68px;}
+#wrap{position: relative; overflow: hidden;}
