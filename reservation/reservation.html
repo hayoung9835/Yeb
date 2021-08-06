@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>reservation</title>
 	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/sidebar.css"/>
 	<link rel="stylesheet" href="css/reservation.css"/>
 	<script src="../js/jquery-1.9.1.min.js"></script>
-	    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="../js/sidebar.js"></script>
 	<script src="js/reservation.js"></script>
+
 </head>
 <body>
 	<div id="wrap">
@@ -18,7 +20,7 @@
 					<span></span>
 					<span></span>
 				</div>
-				<button class="map_btn fr" type="button" onClick="location.href='../map.html';"></button>
+				<button class="map_btn fr" type="button" onClick="location.href='../map/map.html';"></button>
 			</div>
 		</header>
 		<section>
@@ -66,85 +68,555 @@
 			
 			<div class="content3">
 				<div class="con_inner">
-					<div class="reserv_select">
+					<form method="post" class="reserv_select">
 						<ul class="reserv_date cf">
 							<li class="on">
-								<a href="#" class="day">15</a>
-								<a href="#" class="d_week">화</a>
+								<label for="day1" class="day">15</label>
+								<label for="day1" class="d_week">화</label>
+								<input type="radio" name="date" id="day1" checked/>
 							</li>
 							<li>
-								<a href="#" class="day">16</a>
-								<a href="#" class="d_week">수</a>
+								<label for="day2" class="day">16</label>
+								<label for="day2" class="d_week">수</label>
+								<input type="radio" name="date" id="day2"/>
 							</li>
 							<li>
-								<a href="#" class="day">17</a>
-								<a href="#" class="d_week">목</a>
+								<label for="day3" class="day">17</label>
+								<label for="day3" class="d_week">목</label>
+								<input type="radio" name="date" id="day3"/>
 							</li>
 							<li>
-								<a href="#" class="day">18</a>
-								<a href="#" class="d_week">금</a>
+								<label for="day4" class="day">18</label>
+								<label for="day4" class="d_week">금</label>
+								<input type="radio" name="date" id="day4"/>
 							</li>
 							<li>
-								<a href="#" class="day blue">19</a>
-								<a href="#" class="d_week blue">토</a>
+								<label for="day5" class="day blue">19</label>
+								<label for="day5" class="d_week blue">토</label>
+								<input type="radio" name="date" id="day5"/>
 							</li>
 							<li>
-								<a href="#" class="day red">20</a>
-								<a href="#" class="d_week red">일</a>
+								<label for="day6" class="day red">20</label>
+								<label for="day6" class="d_week red">일</label>
+								<input type="radio" name="date" id="day6"/>
 							</li>
 							<li>
-								<a href="#" class="day">21</a>
-								<a href="#" class="d_week">월</a>
+								<label for="day7" class="day">21</label>
+								<label for="day7" class="d_week">월</label>
+								<input type="radio" name="date" id="day7"/>
 							</li>
-						</ul>
-						<ul class="reserv_time cf">
-							<li>
-								<a href="#">14:00 ~ 16:00</a>
-							</li>
-							<li class="on">
-								<a href="#">16:00 ~ 18:00</a>
-							</li>
-							<li class="on">
-								<a href="#">18:00 ~ 20:00</a>
-							</li>
-							<li class="on">
-								<a href="#">20:00 ~ 22:00</a>
-							</li>
-							<li>
-								<a href="#">22:00 ~ 24:00</a>
-							</li>
-						</ul>
-						<ul class="reserv_court cf">
-							<li>
-								<a href="#">1코트</a>
-							</li>
-							<li>
-								<a href="#">2코트</a>
-							</li>
-							<li>
-								<a href="#">3코트</a>
-							</li>
-							<li>
-								<a href="#">4코트</a>
-							</li>
-							<li>
-								<a href="#">5코트</a>
-							</li>
-							<li>
-								<a href="#">6코트</a>
-							</li>
-							<li>
-								<a href="#">7코트</a>
-							</li>
-							<li>
-								<a href="#">8코트</a>
-							</li>
-							<li>
-								<a href="#">9코트</a>
-							</li>
-						</ul>
-						<input class="reserv_btn" type="submit" value="예약하기"/>
-					</div>
+						</ul><!-- class="reserv_date cf" -->
+						
+						<div class="tab_content"> <!-- 텝1 -->
+							<ul class="reserv_time cf">
+								<li>
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1" checked/>
+								</li>
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li class="on">
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5"/>
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li>
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li>
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li class="on">
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li>
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li>
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content1" -->
+						<div class="tab_content"> <!-- 텝2 -->
+							<ul class="reserv_time cf">
+								<li class="on">
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li class="on">
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li class="on">
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li class="on">
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content2" -->							
+						<div class="tab_content"> <!-- 텝3 -->
+							<ul class="reserv_time cf">
+								<li class="on">
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li>
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li>
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li>
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li>
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content3" -->		
+						<div class="tab_content"> <!-- 텝4 -->
+							<ul class="reserv_time cf">
+								<li>
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li>
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li>
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li class="on">
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li class="on">
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li class="on">
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content4" -->		
+						<div class="tab_content"> <!-- 텝5 -->
+							<ul class="reserv_time cf">
+								<li class="on">
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li class="on">
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li class="on">
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li class="on">
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content5" -->		
+						<div class="tab_content"> <!-- 텝6 -->
+							<ul class="reserv_time cf">
+								<li class="on">
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li class="on">
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li class="on">
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li class="on">
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li>
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li class="on">
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content6" -->		
+						<div class="tab_content"> <!-- 텝7 -->
+							<ul class="reserv_time cf">
+								<li>
+									<label for="time1">6:00 ~ 8:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">8:00 ~ 10:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li>
+									<label for="time1">12:00 ~ 14:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>
+								<li class="on">
+									<label for="time1">14:00 ~ 16:00</label>
+									<input type="radio" name="time" id="time1"/>
+								</li>								
+								<li class="on">
+									<label for="time2">16:00 ~ 18:00</label>
+									<input type="radio" name="time" id="time2"/>
+								</li>
+								<li>
+									<label for="time3">18:00 ~ 20:00</label>
+									<input type="radio" name="time" id="time3"/>
+								</li>
+								<li class="on">
+									<label for="time4">20:00 ~ 22:00</label>
+									<input type="radio" name="time" id="time4"/>
+								</li>
+								<li>
+									<label for="time5">22:00 ~ 24:00</label>
+									<input type="radio" name="time" id="time5" />
+								</li>
+							</ul>
+							<ul class="reserv_court cf">
+								<li class="on">
+									<label for="court1">1코트</label>
+									<input type="checkbox" name="court" id="court1"/>
+								</li>
+								<li class="on">
+									<label for="court2">2코트</label>
+									<input type="checkbox" name="court" id="court2"/>
+								</li>
+								<li>
+									<label for="court3">3코트</label>
+									<input type="checkbox" name="court" id="court3"/>
+								</li>
+								<li class="on">
+									<label for="court4">4코트</label>
+									<input type="checkbox" name="court" id="court4"/>
+								</li>
+								<li>
+									<label for="court5">5코트</label>
+									<input type="checkbox" name="court" id="court5"/>
+								</li>
+								<li class="on">
+									<label for="court6">6코트</label>
+									<input type="checkbox" name="court" id="court6"/>
+								</li>
+								<li>
+									<label for="court7">7코트</label>
+									<input type="checkbox" name="court" id="court7"/>
+								</li>
+								<li class="on">
+									<label for="court8">8코트</label>
+									<input type="checkbox" name="court" id="court8"/>
+								</li>
+								<li>
+									<label for="court9">9코트</label>
+									<input type="checkbox" name="court" id="court9"/>
+								</li>
+							</ul>
+						</div><!-- class="tab_content7" -->		
+						
+						<a class="reserv_btn" href="../member/login_form.php"/>예약하기</a>
+				
+					</form>
 				</div>
 			</div>
 			
@@ -153,31 +625,31 @@
 					<h3>코트배치도</h3>
 					<div class="court_layout">
 						<ul class="cf">
-							<li id="court1">
+							<li class="court1">
 								<a href="#"><img src="img/court.png" alt="코트1"/></a>
 							</li>
-							<li id="court2">
+							<li class="court2">
 								<a href="#"><img src="img/court.png" alt="코트2"/></a>
 							</li>
-							<li id="court3">
+							<li class="court3">
 								<a href="#"><img src="img/court_on.png" alt="코트3"/></a>
 							</li>
-							<li id="court4" class="cf">
+							<li class="court4 cf">
 								<a href="#"><img src="img/court.png" alt="코트4"/></a>
 							</li>
-							<li id="court5">
+							<li class="court5">
 								<a href="#"><img src="img/court_on.png" alt="코트5"/></a>
 							</li>
-							<li id="court6">
+							<li class="court6">
 								<a href="#"><img src="img/court.png" alt="코트6"/></a>
 							</li>
-							<li id="court7" class="cf">
+							<li class="court7 cf">
 								<a href="#"><img src="img/court.png" alt="코트7"/></a>
 							</li>
-							<li id="court8">
+							<li class="court8">
 								<a href="#"><img src="img/court.png" alt="코트8"/></a>
 							</li>
-							<li id="court9">
+							<li class="court9">
 								<a href="#"><img src="img/court.png" alt="코트9"/></a>
 							</li>
 						</ul>
@@ -288,12 +760,34 @@
 		</footer>
 		<div id="f_menu">
 			<ul class="cf">
-				<li><a href="../index.html">홈</a></li>
-				<li><a href="../index.html">예약</a></li>
-				<li class="on"><a href="../index.html">커뮤니티</a></li>
-				<li><a href="../index.html">내정보</a></li>
+				<li><a href="../index2.html">홈</a></li>
+				<li class="on"><a href="../reservation/reservation.html">예약</a></li>
+				<li><a href="../cummunity/cummunity.html">커뮤니티</a></li>
+				<li><a href="../information/information.html">내정보</a></li>
 			</ul>
 		</div>
+		<div id="sidebar">
+			<div class="sidebar_inner">
+				<div class="login_box">
+					<a href="../member/login_form.php" class="cf"><img src="../img/profile.png" alt="login_icon"/><span class="text">로그인하기</span><span class="arrow"><img src="../img/right_arrow.png" alt="right_arrow"/></span></a>
+				</div>
+ 				<ul class="list1">
+					<li><a href="../mypage/reservation_list.html">나의 예약</a></li>
+					<li><a href="../mypage/board.html">나의 게시물</a></li>
+					<li><a href="../cummunity/chatting.html">나의 대화</a></li>
+					<li><a href="../competition/match.html">대회일정</a></li>
+				</ul>
+				<ul class="list2">
+					<li><a href="#">공지사항 <span class="new"><img src="../img/new.png" alt="new_icon"/></span></a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">설정</a></li>
+				</ul>
+				<div class="s_banner">
+					<img src="../img/s_banner.png" alt="s_banner"/>
+				</div>
+			</div>
+		</div>		
 	</div>
 </body>
 </html>

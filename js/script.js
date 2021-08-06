@@ -1,14 +1,25 @@
 ﻿$(function(){	
+
+	/* 팝업연동 */
+	if($.cookie('pop') != 'no'){$('#pop').show();}
+	//eq(0) >창닫기 eq(1)> 하루동안 열지 않기
+	$('#pop .close').on('click',function(){
+		$('#pop').fadeOut('fast');
+		return false;
+	});
+	$('#pop #last_btn').on('click',function(){
+		//expires = 유통기한
+		$.cookie('pop','no',{expires:500});
+		$('#pop').fadeOut('fast');
+		return false;
+	});
 	
 	function swing() {
 		$('.click_1').animate({'right':'20px'},1000).animate({'left':'300px'},1000, swing);
 		}	
 	swing();
 
-	$('.slide button').click(function(){
-		$('.pop').css('display','none');
-	});	
-	
+		
 	/* 	$('.popup_text4').DB_springMove({
 			key:'e24102',               
 			dir:'y',              

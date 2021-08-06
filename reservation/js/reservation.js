@@ -41,37 +41,17 @@
 	};
 	
 	/*----- content3 -----*/
-	var tab = $('.reserv_date > li');
-	var content = $('.reserv_time');
-	content.hide().eq(0).show();
-	tab.click(function(e){
-		e.preventDefault();	
+	var tab = $('.reserv_date>li');
+	var content = $('form>div');
+	content.hide();
+	content.eq(0).show();
+	tab.click(function(){
 		var tg = $(this);
 		var i = tg.index();
-		tab.removeClass('on');
-		tg.addClass('on');
+		tab.removeClass('active');
+		tg.addClass('active');
 		content.css('display','none');
 		content.eq(i).css('display','block');
-	});
-	
-	var m_tab = $('.reserv_time > li');
-	var m_content = $('.reserv_court');
-	m_content.hide().eq(0).show();
-	m_tab.click(function(e){
-		e.preventDefault();	
-		var tg = $(this);
-		var i = tg.index();
-		m_tab.removeClass('active');
-		tg.addClass('active');
-		m_content.css('display','none');
-		m_content.eq(i).css('display','block');
-	});
-	
-	var l_tab = $('.reserv_court > li');
-	l_tab.click(function(e){
-		e.preventDefault();
-		var tg = $(this);
-		tg.addClass('active');
 	});
 	
 	/*----- content4 -----*/
